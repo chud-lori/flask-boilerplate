@@ -16,7 +16,7 @@ class PsqlUserRepository(UserRepository):
         if self.connection and not self.connection.closed:
             self.connection.close()
 
-    def select_user(self, user_id: int) -> User:
+    def select_user_by_id(self, user_id: str) -> User:
         user_data: User = User(user_id, "lori@mail.com", "dqwdiq", "lori", "the people", "12-03-2012")
         return user_data
 

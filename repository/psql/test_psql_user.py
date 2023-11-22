@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock, patch
 from repository.psql.psql_user import PsqlUserRepository
-from your_module.domain.user import User
+from domain.user import User
 
 class TestUserPostgreSQLRepository(unittest.TestCase):
     def setUp(self):
