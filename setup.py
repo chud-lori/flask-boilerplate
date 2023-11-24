@@ -1,6 +1,6 @@
-from cmd.app import make_app
+from cmd.app import create_app
 
-app = make_app()
+app = create_app()
 
 if __name__ == "__main__":
     app.run()
