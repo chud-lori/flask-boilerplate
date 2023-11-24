@@ -1,3 +1,4 @@
+from typing import List
 import psycopg2
 
 from domain.user import User, UserRepository
@@ -15,6 +16,10 @@ class PsqlUserRepository(UserRepository):
     def _disconnect(self):
         if self.connection and not self.connection.closed:
             self.connection.close()
+
+    def select_user_all(self) -> List[User]:
+        # user_data_all: str = "select * from users"
+        return [User for _ in range(10)]
 
     def select_user_by_id(self, user_id: str) -> User:
         user_data: User = User(user_id, "lori@mail.com", "dqwdiq", "lori", "the people", "12-03-2012")
