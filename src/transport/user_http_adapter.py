@@ -1,6 +1,6 @@
-from flask import request, jsonfiy
-from delivery.user_controller import UserController
-from transport.request_interface import RequestUser
+from flask import request, jsonify
+from src.delivery.user_controller import UserController
+from src.transport.request_interface import RequestUser
 
 
 def user_adapter():
@@ -9,12 +9,12 @@ def user_adapter():
         user_data = RequestUser(request_data)
         response_data = UserController().create_user(user_data)
 
-        return jsonfiy(response_data)
+        return jsonify(response_data)
     else:
         users = UserController().get_user_all()
 
-        return jsonfiy(users)
+        return jsonify(users)
 
 def get_user_id(user_id: str):
     user = UserController().get_user_by_id(user_id)
-    return jsonfiy(user)
+    return jsonify(user)

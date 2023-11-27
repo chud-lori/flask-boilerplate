@@ -1,5 +1,5 @@
 from flask import Blueprint
-from transport.user_http_adapter import user_adapter, get_user_id
+from src.transport.user_http_adapter import user_adapter, get_user_id
 
 user_bp = Blueprint("user_bp", __name__, url_prefix="/user")
 

@@ -1,7 +1,7 @@
 from typing import List
 import psycopg2
 
-from domain.user import User, UserRepository
+from src.domain.user import User, UserRepository
 
 
 class PsqlUserRepository(UserRepository):

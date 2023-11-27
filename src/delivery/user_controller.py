@@ -1,6 +1,6 @@
-from application.user_service import UserService
-from repository.psql.psql_user import PsqlUserRepository
-from transport.request_interface import RequestUser, ResponseUser, ResponseUserList
+from src.application.user_service import UserService
+from src.repository.psql.psql_user import PsqlUserRepository
+from src.transport.request_interface import RequestUser, ResponseUser, ResponseUserList
 
 class UserController:
     def __init__(self) -> None:

@@ -1,4 +1,4 @@
-from cmd.app import create_app
+from .src.cmd.app import create_app
 
 app = create_app()
 

@@ -1,4 +1,4 @@
-from domain.user import User, UserRepository
+from src.domain.user import User, UserRepository
 
 class UserService:
     def __init__(self, repository: UserRepository) -> None:

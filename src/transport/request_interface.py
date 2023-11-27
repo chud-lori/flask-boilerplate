@@ -1,6 +1,6 @@
 from typing import List, Optional
 from pydantic import BaseModel
-from domain.user import UserData
+from src.domain.user import UserData
 
 
 class RequestUser(BaseModel):

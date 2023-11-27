@@ -1,15 +1,16 @@
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from typing import Optional, List
+from typing import Optional, List, Tuple
 from pydantic import BaseModel
+
 
 @dataclass
 class User:
-    id: Optional[str] = "" # hash
     email: str
     password: str
     name: str
     description: str
+    id: Optional[str] = "" # hash
     created_at: Optional[str] = ""
     updated_at: Optional[str] = ""
 
@@ -33,5 +34,5 @@ class UserRepository(ABC):
         ...
 
     @abstractmethod
-    def save_user(self, user: User) -> tuple(int, str):
+    def save_user(self, user: User) -> Tuple[int, str]:
         ...
